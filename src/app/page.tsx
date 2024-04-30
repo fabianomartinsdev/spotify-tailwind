@@ -4,6 +4,8 @@ import {
   LibraryBig as Book,
   ChevronLeft,
   ChevronRight,
+  Bell,
+  CircleUser,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -46,7 +48,7 @@ export default function Home() {
           </nav>
         </aside>
         <main className="flex-1 w-auto bg-gradient-to-b from-slate-900 to-zinc-900 my-2 mr-2 rounded p-2">
-          <div className="flex gap-3 ml-4">
+          <div className="flex gap-3 ml-4 items-center">
             <button>
               <ChevronLeft
                 size={36}
@@ -66,11 +68,21 @@ export default function Home() {
               placeholder="O que você quer ouvir?"
               className="bg-zinc-800 rounded-full outline-none w-96 p-3 px-8 font-semibold focus:outline-zinc-300"
             />
+            <div className="flex gap-3 ml-auto">
+              <Bell
+                size={36}
+                className="bg-zinc-950/90 rounded-full font-light p-2"
+              />
+              <CircleUser
+                size={36}
+                className="bg-zinc-950/90 rounded-full font-light p-2"
+              />
+            </div>
           </div>
           <h1 className="font-bold text-3xl mt-8 ml-4 text-zinc-200 mb-4">
             Boa tarde!
           </h1>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 mx-4">
             <div className="bg-white/10 rounded flex">
               <Image
                 src="/mbdtf.jpg"
