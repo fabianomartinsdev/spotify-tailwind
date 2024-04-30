@@ -6,6 +6,7 @@ import {
   ChevronRight,
   Bell,
   CircleUser,
+  Play,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -83,7 +84,7 @@ export default function Home() {
             Boa tarde!
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 mx-4">
-            <div className="bg-white/10 rounded flex">
+            <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
               <Image
                 src="/mbdtf.jpg"
                 alt="My Beautiful Dark Twisted Fantasy"
@@ -94,8 +95,11 @@ export default function Home() {
               <p className="p-4 text-zinc-200 font-semibold">
                 My Beautiful Dark Twisted Fantasy
               </p>
-            </div>
-            <div className="bg-white/10 rounded flex">
+              <button className="ml-auto p-2 mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
               <Image
                 src="/batidao-tropical.jpg"
                 alt="Batidão Tropical Vol. 2"
@@ -106,8 +110,11 @@ export default function Home() {
               <p className="p-4 text-zinc-200 font-semibold">
                 Batidão Tropical Vol. 2
               </p>
-            </div>
-            <div className="bg-white/10 rounded flex">
+              <button className="ml-auto p-2 mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
               <Image
                 src="/ram.jpg"
                 alt="Random Access Memories"
@@ -118,8 +125,11 @@ export default function Home() {
               <p className="p-4 text-zinc-200 font-semibold">
                 Random Access Memories
               </p>
-            </div>
-            <div className="bg-white/10 rounded flex">
+              <button className="ml-auto p-2 mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
               <Image
                 src="/desire.jpg"
                 alt="Desire I Want To Turn Into You"
@@ -130,8 +140,11 @@ export default function Home() {
               <p className="p-4 text-zinc-200 font-semibold">
                 Desire I Want to Turn Into You
               </p>
-            </div>
-            <div className="bg-white/10 rounded flex">
+              <button className="ml-auto p-2 mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
               <Image
                 src="/this.jpg"
                 alt="This Is Why"
@@ -140,8 +153,11 @@ export default function Home() {
                 className="rounded-l"
               />
               <p className="p-4 text-zinc-200 font-semibold">This Is Why</p>
-            </div>
-            <div className="bg-white/10 rounded flex">
+              <button className="p-2 mr-4 ml-auto bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
+            <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
               <Image
                 src="/post.jpg"
                 alt="Post"
@@ -150,7 +166,10 @@ export default function Home() {
                 className="rounded-l"
               />
               <p className="p-4 text-zinc-200 font-semibold">Post</p>
-            </div>
+              <button className="p-2 ml-auto mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
+                <Play />
+              </button>
+            </a>
           </div>
         </main>
       </div>
