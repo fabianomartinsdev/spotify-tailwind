@@ -11,12 +11,18 @@ import {
   Shuffle,
   SkipBack,
   SkipForward,
+  Mic2,
+  MonitorSmartphone,
+  Maximize2,
+  Tv2,
+  List,
+  Volume1,
 } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col text-zinc-400">
+    <div className="flex h-screen flex-col text-zinc-400">
       <div className="flex flex-1">
         <aside className="w-72 bg-zinc-900 rounded my-2 mx-2 p-6">
           <div className="flex items-center gap-2">
@@ -26,15 +32,24 @@ export default function Home() {
           </div>
 
           <nav className="space-y-4 mt-6">
-            <a href="#" className="flex items-center gap-4 font-semibold">
+            <a
+              href="#"
+              className="flex items-center gap-4 font-semibold hover:text-zinc-200"
+            >
               <HomeIcon />
               Início
             </a>
-            <a href="#" className="flex items-center gap-4 font-semibold">
+            <a
+              href="#"
+              className="flex items-center gap-4 font-semibold hover:text-zinc-200"
+            >
               <Search />
               Buscar
             </a>
-            <a href="#" className="flex items-center gap-4 font-semibold">
+            <a
+              href="#"
+              className="flex items-center gap-4 font-semibold hover:text-zinc-200"
+            >
               <Book />
               Sua Biblioteca
             </a>
@@ -187,9 +202,9 @@ export default function Home() {
                 height={500}
                 className="w-full rounded"
               />
-              <div className="flex flex-col gap-2 mt-2">
+              <div className="flex flex-col mt-2">
                 <strong className="font-semibold">GUTS</strong>
-                <span>Olivia Rodrigo</span>
+                <span className="text-sm">Olivia Rodrigo</span>
               </div>
             </div>
             <div className="bg-zinc-900 rounded p-3 hover:bg-zinc-800">
@@ -200,9 +215,9 @@ export default function Home() {
                 height={500}
                 className="w-full rounded"
               />
-              <div className="flex flex-col gap-2 mt-2">
+              <div className="flex flex-col mt-2">
                 <strong className="font-semibold">Starboy</strong>
-                <span>The Weeknd</span>
+                <span className="text-sm">The Weeknd</span>
               </div>
             </div>
             <div className="bg-zinc-900 rounded p-3 hover:bg-zinc-800">
@@ -213,11 +228,11 @@ export default function Home() {
                 height={500}
                 className="w-full rounded"
               />
-              <div className="flex flex-col gap-2 mt-2">
+              <div className="flex flex-col mt-2">
                 <strong className="font-semibold">
                   Sin Miedo (del Amor y Otros Demonios)
                 </strong>
-                <span>Kali Uchis</span>
+                <span className="text-sm">Kali Uchis</span>
               </div>
             </div>
             <div className="bg-zinc-900 rounded p-3 hover:bg-zinc-800">
@@ -228,9 +243,9 @@ export default function Home() {
                 height={500}
                 className="w-full rounded"
               />
-              <div className="flex flex-col gap-2 mt-2">
+              <div className="flex flex-col mt-2">
                 <strong className="font-semibold">Plastic Beach</strong>
-                <span>Gorillaz</span>
+                <span className="text-sm">Gorillaz</span>
               </div>
             </div>
             <div className="bg-zinc-900 rounded p-3 hover:bg-zinc-800">
@@ -241,16 +256,16 @@ export default function Home() {
                 height={500}
                 className="w-full rounded"
               />
-              <div className="flex flex-col gap-2 mt-2">
+              <div className="flex flex-col mt-2">
                 <strong className="font-semibold">Cura</strong>
-                <span>Viratempo</span>
+                <span className="text-sm">Viratempo</span>
               </div>
             </div>
           </div>
         </main>
       </div>
-      <footer className="bg-zinc-950 h-20 p-4 mb-2 flex items-center justify-between text-zinc-200">
-        <div className="flex justify-center items-center">
+      <footer className="bg-zinc-950 p-4 flex items-center justify-between text-zinc-200">
+        <div className="flex">
           <Image
             src="/friends.jpg"
             alt="I love my girl, she's my boy"
@@ -258,31 +273,64 @@ export default function Home() {
             height={60}
             className="rounded"
           />
-          <div className="flex flex-col gap-1 ml-4">
+          <div className="flex flex-col ml-4">
             <strong className="font-semibold">
               I love my girl, she&apos;s my boy
             </strong>
-            <span>BETWEEN FRIENDS</span>
+            <span className="text-sm">BETWEEN FRIENDS</span>
           </div>
         </div>
-        <div className="flex gap-6">
-          <button className="hover:text-zinc-100">
-            <Shuffle />
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex gap-6 text-zinc-400">
+            <button className="hover:text-white">
+              <Shuffle />
+            </button>
+            <button className="hover:text-white">
+              <SkipBack />
+            </button>
+            <button className="hover:bg-white w-10 h-10 flex items-center justify-center rounded-full bg-zinc-200 text-zinc-950">
+              <Play fill="black" />
+            </button>
+            <button className="hover:text-white">
+              <SkipForward />
+            </button>
+            <button className="hover:text-white">
+              <LucideRepeat />
+            </button>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-zinc-400">0:31</span>
+            <span className="bg-zinc-600 rounded h-1 w-144">
+              <div className="bg-zinc-200 w-24 h-1 rounded hover:bg-green-400"></div>
+            </span>
+            <span className="text-xs text-zinc-400">3:33</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-3 text-zinc-400">
+          <button className="hover:text-zinc-200">
+            <Mic2 size={18} />
           </button>
-          <button>
-            <SkipBack fill="white" />
+          <button className="hover:text-zinc-200">
+            <List size={18} />
           </button>
-          <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-zinc-950">
-            <Play fill="black" />
+          <button className="hover:text-zinc-200">
+            <MonitorSmartphone size={18} />
           </button>
-          <button>
-            <SkipForward fill="white" />
+          <div className="flex items-center gap-2">
+            <button className="hover:text-zinc-200">
+              <Volume1 size={18} />
+            </button>
+            <div className="w-20 bg-zinc-500 h-1 rounded-full">
+              <div className="w-16 bg-zinc-200 h-1 rounded-full"></div>
+            </div>
+          </div>
+          <button className="hover:text-zinc-200">
+            <Tv2 size={18} />
           </button>
-          <button>
-            <LucideRepeat />
+          <button className="hover:text-zinc-200">
+            <Maximize2 size={18} />
           </button>
         </div>
-        <div>Outra parte</div>
       </footer>
     </div>
   );
