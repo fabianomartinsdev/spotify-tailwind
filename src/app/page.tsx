@@ -5,6 +5,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -65,6 +66,79 @@ export default function Home() {
               placeholder="O que você quer ouvir?"
               className="bg-zinc-800 rounded-full outline-none w-96 p-3 px-8 font-semibold focus:outline-zinc-300"
             />
+          </div>
+          <h1 className="font-bold text-3xl mt-8 ml-4 text-zinc-200 mb-4">
+            Boa tarde!
+          </h1>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <div className="bg-white/10 rounded flex">
+              <Image
+                src="/mbdtf.jpg"
+                alt="My Beautiful Dark Twisted Fantasy"
+                width={80}
+                height={80}
+                className="rounded-l"
+              />
+              <p className="p-4 text-zinc-200 font-semibold">
+                My Beautiful Dark Twisted Fantasy
+              </p>
+            </div>
+            <div className="bg-white/10 rounded flex">
+              <Image
+                src="/batidao-tropical.jpg"
+                alt="Batidão Tropical Vol. 2"
+                width={80}
+                height={80}
+                className="rounded-l"
+              />
+              <p className="p-4 text-zinc-200 font-semibold">
+                Batidão Tropical Vol. 2
+              </p>
+            </div>
+            <div className="bg-white/10 rounded flex">
+              <Image
+                src="/ram.jpg"
+                alt="Random Access Memories"
+                width={80}
+                height={80}
+                className="rounded-l"
+              />
+              <p className="p-4 text-zinc-200 font-semibold">
+                Random Access Memories
+              </p>
+            </div>
+            <div className="bg-white/10 rounded flex">
+              <Image
+                src="/desire.jpg"
+                alt="Desire I Want To Turn Into You"
+                width={80}
+                height={80}
+                className="rounded-l"
+              />
+              <p className="p-4 text-zinc-200 font-semibold">
+                Desire I Want to Turn Into You
+              </p>
+            </div>
+            <div className="bg-white/10 rounded flex">
+              <Image
+                src="/this.jpg"
+                alt="This Is Why"
+                width={80}
+                height={80}
+                className="rounded-l"
+              />
+              <p className="p-4 text-zinc-200 font-semibold">This Is Why</p>
+            </div>
+            <div className="bg-white/10 rounded flex">
+              <Image
+                src="/post.jpg"
+                alt="Post"
+                width={80}
+                height={80}
+                className="rounded-l"
+              />
+              <p className="p-4 text-zinc-200 font-semibold">Post</p>
+            </div>
           </div>
         </main>
       </div>
