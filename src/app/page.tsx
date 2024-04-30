@@ -1,72 +1,19 @@
 import {
-  Home as HomeIcon,
-  Search,
-  LibraryBig as Book,
   ChevronLeft,
   ChevronRight,
   Bell,
   CircleUser,
   Play,
-  LucideRepeat,
-  Shuffle,
-  SkipBack,
-  SkipForward,
-  Mic2,
-  MonitorSmartphone,
-  Maximize2,
-  Tv2,
-  List,
-  Volume1,
 } from "lucide-react";
 import Image from "next/image";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <div className="flex h-screen flex-col text-zinc-400">
       <div className="flex flex-1">
-        <aside className="w-72 bg-zinc-900 rounded my-2 mx-2 p-6">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-            <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-          </div>
-
-          <nav className="space-y-4 mt-6">
-            <a
-              href="#"
-              className="flex items-center gap-4 font-semibold hover:text-zinc-200"
-            >
-              <HomeIcon />
-              Início
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-4 font-semibold hover:text-zinc-200"
-            >
-              <Search />
-              Buscar
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-4 font-semibold hover:text-zinc-200"
-            >
-              <Book />
-              Sua Biblioteca
-            </a>
-          </nav>
-          <nav className="mt-6 pt-4 border-t border-zinc-800 flex flex-col gap-2">
-            <a href="">good shit</a>
-            <a href="">popzinho2023</a>
-            <a href="">Batidão Tropical Vol. 2</a>
-            <a href="">SOS</a>
-            <a href="">Nightmare</a>
-            <a href="">This Is Why</a>
-            <a href="">Random Access Memories</a>
-            <a href="">My Beautiful Dark Twisted Fantasy</a>
-            <a href="">Desire, I Want To Turn Into You</a>
-            <a href="">SUPER</a>
-          </nav>
-        </aside>
+        <Sidebar />
         <main className="flex-1 w-auto bg-gradient-to-b from-slate-900 to-zinc-900 my-2 mr-2 rounded p-2">
           <div className="flex gap-3 ml-4 items-center">
             <button>
@@ -115,7 +62,7 @@ export default function Home() {
                 My Beautiful Dark Twisted Fantasy
               </p>
               <button className="ml-auto p-2 mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
-                <Play size={16} />
+                <Play size={16} fill="black" />
               </button>
             </a>
             <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
@@ -130,7 +77,7 @@ export default function Home() {
                 Batidão Tropical Vol. 2
               </p>
               <button className="ml-auto p-2 mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
-                <Play size={16} />
+                <Play size={16} fill="black" />
               </button>
             </a>
             <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
@@ -145,7 +92,7 @@ export default function Home() {
                 Random Access Memories
               </p>
               <button className="ml-auto p-2 mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
-                <Play size={16} />
+                <Play size={16} fill="black" />
               </button>
             </a>
             <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
@@ -160,7 +107,7 @@ export default function Home() {
                 Desire I Want to Turn Into You
               </p>
               <button className="ml-auto p-2 mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
-                <Play size={16} />
+                <Play size={16} fill="black" />
               </button>
             </a>
             <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
@@ -173,7 +120,7 @@ export default function Home() {
               />
               <p className="p-4 text-zinc-200 font-semibold">This Is Why</p>
               <button className="p-2 mr-4 ml-auto bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
-                <Play size={16} />
+                <Play size={16} fill="black" />
               </button>
             </a>
             <a className="group bg-white/10 rounded flex items-center gap-2 hover:bg-white/20 transition-colors">
@@ -186,7 +133,7 @@ export default function Home() {
               />
               <p className="p-4 text-zinc-200 font-semibold">Post</p>
               <button className="p-2 ml-auto mr-4 bg-green-500 rounded-full text-zinc-950 invisible group-hover:visible">
-                <Play size={16} />
+                <Play size={16} fill="black" />
               </button>
             </a>
           </div>
@@ -264,74 +211,7 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <footer className="bg-zinc-950 p-4 flex items-center justify-between text-zinc-200">
-        <div className="flex">
-          <Image
-            src="/friends.jpg"
-            alt="I love my girl, she's my boy"
-            width={60}
-            height={60}
-            className="rounded"
-          />
-          <div className="flex flex-col ml-4">
-            <strong className="font-semibold">
-              I love my girl, she&apos;s my boy
-            </strong>
-            <span className="text-sm">BETWEEN FRIENDS</span>
-          </div>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <div className="flex gap-6 text-zinc-400">
-            <button className="hover:text-white">
-              <Shuffle />
-            </button>
-            <button className="hover:text-white">
-              <SkipBack />
-            </button>
-            <button className="hover:bg-white w-10 h-10 flex items-center justify-center rounded-full bg-zinc-200 text-zinc-950">
-              <Play fill="black" />
-            </button>
-            <button className="hover:text-white">
-              <SkipForward />
-            </button>
-            <button className="hover:text-white">
-              <LucideRepeat />
-            </button>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-zinc-400">0:31</span>
-            <span className="bg-zinc-600 rounded h-1 w-144">
-              <div className="bg-zinc-200 w-24 h-1 rounded hover:bg-green-400"></div>
-            </span>
-            <span className="text-xs text-zinc-400">3:33</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-3 text-zinc-400">
-          <button className="hover:text-zinc-200">
-            <Mic2 size={18} />
-          </button>
-          <button className="hover:text-zinc-200">
-            <List size={18} />
-          </button>
-          <button className="hover:text-zinc-200">
-            <MonitorSmartphone size={18} />
-          </button>
-          <div className="flex items-center gap-2">
-            <button className="hover:text-zinc-200">
-              <Volume1 size={18} />
-            </button>
-            <div className="w-20 bg-zinc-500 h-1 rounded-full">
-              <div className="w-16 bg-zinc-200 h-1 rounded-full"></div>
-            </div>
-          </div>
-          <button className="hover:text-zinc-200">
-            <Tv2 size={18} />
-          </button>
-          <button className="hover:text-zinc-200">
-            <Maximize2 size={18} />
-          </button>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
